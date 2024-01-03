@@ -158,11 +158,12 @@ ol,ul > li{
   margin-bottom: 10px;
 }
 
-pre{
+pre {
   border-radius: 0.5rem;
   margin: 10px 0;
   width: 100%;
 }
+
 
 .customBlogDesc > blockquote {
   border-radius: 0.5rem ;
@@ -179,14 +180,14 @@ pre{
   font-weight: 600;
   line-height: normal;
 }
-.customBlogDesc > img{
+.customBlogDesc > img {
   border-radius: 0.5rem;
-  width: 90vw;
-  height: 60vh;
   display: block; 
   margin-left: auto; 
   margin-right: auto;
   margin-bottom: 20px;
+  object-fit: cover;
+  border: 1px solid;
 }
 
 iframe {

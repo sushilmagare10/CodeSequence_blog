@@ -9,7 +9,7 @@ const SigninButton = () => {
 
     if (session && session.user) {
         return (
-            <div className="hidden lg:flex capitalize cursor-pointer">
+            <div className=" capitalize cursor-pointer">
                 <button onClick={() => signOut()} className="navUnderlineHover mr-2">
                     Sign Out
                 </button>

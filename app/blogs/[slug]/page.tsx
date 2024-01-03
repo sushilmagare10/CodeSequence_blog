@@ -70,6 +70,7 @@ const renderHTMLWithCodeHighlighting = (content: string) => {
                         style={atomOneDark}
                         wrapLines={true}
                         wrapLongLines={true}
+                        useInlineStyles
                     >
                         {node.children[0]?.data}
                     </SyntaxHighlighter>

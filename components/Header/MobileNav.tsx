@@ -21,12 +21,24 @@ const MobileNav = () => {
             <div
                 className={`absolute top-24 left-0 bg-background h-[calc(100vh-100px)] w-full flex flex-col items-center justify-center gap-12 text-2xl z-[999]  ${open ? 'transition-all ease-in-out duration-500 pointer-events-auto' : 'transition-all ease-in-out duration-500 opacity-0 pointer-events-none'}`}
             >
+                {/* Close button */}
+                {open && (
+                    <div className="absolute top-4 right-4">
+                        <button
+                            onClick={() => setOpen(false)}
+                            className="text-white text-xl focus:outline-none"
+                        >
+                            Close
+                        </button>
+                    </div>
+                )}
+
                 {links.map((link) => (
                     <Link href={link.hash} key={link.name} className='capitalize'>
                         <span className='navUnderlineHover'>{link.name}</span>
                     </Link>
                 ))}
-                 {userIsAdmin && (
+                {userIsAdmin && (
                     <Link href='/admin' className='hidden md:flex cursor-pointer'>
                         <span className='navUnderlineHover'>
                             Write
@@ -38,7 +50,9 @@ const MobileNav = () => {
                         Portfolio
                     </span>
                 </Link>
-                <SigninButton/>
+                <span className="navUnderlineHover">
+                    <SigninButton />
+                </span>
             </div>
         </>
     );

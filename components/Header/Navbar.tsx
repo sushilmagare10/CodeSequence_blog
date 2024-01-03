@@ -44,7 +44,9 @@ const Navbar = () => {
                         Portfolio
                     </span>
                 </Link>
-                <SigninButton />
+                <span className='hidden lg:flex'>
+                    <SigninButton />
+                </span>
                 <MobileNav />
                 <ThemeToggle />
             </div>
