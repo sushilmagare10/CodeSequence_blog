@@ -5,7 +5,7 @@ import { Instagram, Twitter, Linkedin } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <div className='flex flex-col md:flex-row justify-between items-center mt-8 gap-3 md:gap-10 md:mt-16  bg-card w-full shadow-2xl rounded-lg mb-6 py-10 md:px-16'>
+        <div className='flex flex-col md:flex-row justify-between items-center mt-8 gap-3 md:gap-10 md:mt-16 bg-card w-full shadow-2xl rounded-lg py-10 md:px-[5rem] lg:px-[18rem]'>
             <div className='text-2xl md:text-4xl font-bold tracking-wide '>
                 Code<span className='text-purple-500'>Seqeunce</span>
             </div>

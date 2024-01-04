@@ -5,12 +5,13 @@ import Link from 'next/link'
 import { Link as LucideLink } from 'lucide-react';
 import { Post } from '@/utils/types';
 
-const revalidate = 0
 
 const getData = async () => {
     try {
         const res = await fetch(
-            `${process.env.BASE_URL}/api/posts`,
+            `${process.env.BASE_URL}/api/posts`, {
+            next: { revalidate: 60 }
+        }
         );
 
         return res.json();
@@ -23,6 +24,7 @@ const getData = async () => {
 const CardList = async () => {
 
     const { posts } = await getData();
+
     const post = posts.slice(0, 2)
 
     return (

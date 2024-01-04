@@ -29,14 +29,14 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SessionProvider>
+            <Navbar />
             <div className='container'>
-              <Navbar />
               <div className='wrapper'>
                 {children}
               </div>
-              <Footer />
               <ToastContainer />
             </div>
+            <Footer />
           </SessionProvider>
         </ThemeProvider>
       </body>

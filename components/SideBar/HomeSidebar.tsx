@@ -21,7 +21,7 @@ const HomeSidebar = async () => {
     const sortByViews = [...posts].sort((a, b) => b.views - a.views).slice(0, 3)
 
     return (
-        <section className='flex flex-col flex-[2] mt-8 lg:mt-24 mb-6 h-max w-full py-3 rounded-lg items-center justify-center sticky top-10 bg-card shadow-2xl '>
+        <section className='flex flex-col flex-[2] mt-8 lg:mt-24 mb-6 h-max w-full py-3 rounded-md items-center justify-center sticky top-32 bg-card shadow-2xl'>
             <div className='flex items-center  justify-start '>
                 <h2 className='text-lg text-primary dark:text-white uppercase font-semibold tracking-wide'>
                     Most Viewed Posts

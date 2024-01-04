@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ['/write']
             }
         ],
-        sitemap: `${process.env.NEXT_PUBLIC_BASE_URL}/sitemap.xml`
+        sitemap: `${process.env.BASE_URL}/sitemap.xml`
     }
 }

@@ -1,11 +1,11 @@
 "use client"
 
 import { useState } from "react";
-import { HiMenu } from "react-icons/hi";
 import { links } from '@/lib/Links'
 import SigninButton from '../Auth/SignInButton'
 import { useSession } from 'next-auth/react';
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 const MobileNav = () => {
 
@@ -16,23 +16,11 @@ const MobileNav = () => {
     return (
         <>
             <div className='lg:hidden' onClick={() => setOpen(!open)}>
-                <HiMenu className='text-2xl' />
+                {open ? (< X />) : (<Menu className='text-2xl' />)}
             </div>
             <div
                 className={`absolute top-24 left-0 bg-background h-[calc(100vh-100px)] w-full flex flex-col items-center justify-center gap-12 text-2xl z-[999]  ${open ? 'transition-all ease-in-out duration-500 pointer-events-auto' : 'transition-all ease-in-out duration-500 opacity-0 pointer-events-none'}`}
             >
-                {/* Close button */}
-                {open && (
-                    <div className="absolute top-4 right-4">
-                        <button
-                            onClick={() => setOpen(false)}
-                            className="text-white text-xl focus:outline-none"
-                        >
-                            Close
-                        </button>
-                    </div>
-                )}
-
                 {links.map((link) => (
                     <Link href={link.hash} key={link.name} className='capitalize'>
                         <span className='navUnderlineHover'>{link.name}</span>

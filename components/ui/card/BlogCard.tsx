@@ -18,20 +18,20 @@ const BlogCard = ({ item }: any) => {
     const formattedDate = `${month} ${date}, ${year}`;
     return (
         <div
-            className='group flex flex-col lg:flex lg:flex-row p-4 gap-3 cursor-pointer bg-card rounded-lg shadow-2xl '>
+            className='group flex flex-col lg:flex lg:flex-row p-4 gap-3 cursor-pointer bg-card rounded-md shadow-2xl '>
             {item.img && (
                 <div className='lg:flex-1 h-[200px] md:h-[270px] w-full relative rounded-lg  overflow-hidden'>
                     <Image
                         fill
                         src={cloudinaryURL}
                         alt={item?.title}
-                        className='rounded-lg drop-shadow-md' />
+                        className='rounded-md drop-shadow-md' />
                 </div>
             )}
             <div className='lg:flex-1 flex-col '>
                 <div className='flex items-center justify-start gap-3 p-4'>
                     <p className='text-sm font-semibold text-primary '>{formattedDate}</p>
-                    <span className=' border h-3  border-primary'></span>
+                    <span className='border h-3 border-primary'></span>
                     <p className='text-xs font-semibold px-3 py-1 sm:px-4 bgCategory'>{item?.catSlug}</p>
                 </div>
                 <Link href={`/blogs/${item?.slug}`}>

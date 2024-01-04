@@ -26,7 +26,7 @@ const Hero = async () => {
     const cloudinaryURL = `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/q_100/${randomPost.img}`;
 
     return (
-        <div className='flex justify-center shadow-xl h-[50vh] lg:h-[65vh] w-full mt-10  rounded-lg'>
+        <div className='flex justify-center shadow-xl h-[50vh] lg:h-[65vh] w-full mt-10  rounded-md'>
             <div className='flex flex-col md:flex md:flex-row w-full justify-between items-center  gap-4 rounded-lg'>
                 <div className=' w-full h-[75vh] md:h-full relative shadow-2xl rounded-lg '>
                     {randomPost?.img && (
@@ -36,9 +36,9 @@ const Hero = async () => {
                             alt={randomPost?.title}
                             className='rounded-lg drop-shadow-md' />
                     )}
-                    <div className='flex flex-col absolute z-50 justify-center items-center cursor-pointer px-8 py-6 md:px-16 md:py-12 bg-card rounded-lg left-2 bottom-3 md:left-4 md:bottom-5 lg:left-10 lg:bottom-16 w-[95%] md:w-9/12 lg:w-[50%] shadow-2xl'>
+                    <div className='flex flex-col absolute z-40 justify-center items-center cursor-pointer px-8 py-6 md:px-16 md:py-12 bg-card rounded-md left-2 bottom-3 md:left-4 md:bottom-5 lg:left-10 lg:bottom-16 w-[95%] md:w-9/12 lg:w-[50%] shadow-2xl'>
                         <div className='group flex flex-col gap-3 lg:gap-6 transition duration-300 '>
-                            <span className=' flex justify-center items-center py-1 text-sm px-4 rounded-sm shadow-xl bgCategory w-max group-hover:shadow-purple-500/40 capitalize font-semibold'>
+                            <span className=' flex justify-center items-center py-1 text-sm px-4 rounded-sm shadow-xl bgCategory w-max  capitalize font-semibold'>
                                 {randomPost?.catSlug}
                             </span>
                             <Link href={`/blogs/${randomPost?.slug}`}>

@@ -6,15 +6,15 @@ const SidebarCard = ({ post }: any) => {
     return (
         <>
             <div
-                className='flex flex-col items-center gap-3 px-4 py-6 md:px-6 lg:py-3 lg:px-5 mt-5 cursor-pointer w-full  lg:w-full rounded-lg'>
+                className='flex flex-col items-center gap-3 px-4 py-6 md:px-6 lg:py-3 lg:px-5 mt-5 cursor-pointer w-full  lg:w-full rounded-md'>
                 <Link href={`/blogs/${post?.slug}`} className='w-full' >
                     <div className='group flex flex-col lg:flex-row  gap-4  w-full justify-center items-center '>
-                        <div className='flex relative h-[180px] w-full md:h-[280px] lg:h-[90px]  lg:w-[110px] items-center  drop-shadow-2xl rounded-lg overflow-hidden'>
+                        <div className='flex relative h-[180px] w-full md:h-[280px] lg:h-[90px]  lg:w-[110px] items-center  drop-shadow-2xl rounded-md overflow-hidden'>
                             <Image
                                 fill
                                 src={cloudinaryURL}
                                 alt={post?.title}
-                                className=' border-[1.5px] rounded-lg object-center'
+                                className=' border-[1.5px] rounded-md object-center'
                             />
                         </div>
                         <div className='flex-[2] w-full flex-col '>

@@ -6,7 +6,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         const posts = await prisma.post.findMany(); 
 
         const postEntries: MetadataRoute.Sitemap = posts.map(({ slug }) => ({
-            url: `/posts/${slug}`,
+            url: `${process.env.BASE_URL}/posts/${slug}`,
+            priority: 0.5,
+            changeFrequency:'monthly'
         }));
 
         const routes = ['', '/portfolio', '/about','/contact'].map((route) => ({

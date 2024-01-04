@@ -11,6 +11,9 @@ export const GET = async (req: NextRequest) => {
         where: {
             ...(cat && { catSlug: cat }),
         },
+        orderBy: {
+            createdAt: "desc"
+        } as const
     };
 
     try {

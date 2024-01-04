@@ -45,8 +45,8 @@ const BlogSideBar = async ({ category, postId }: SideBarProps) => {
 
 
     return (
-        <section className=' sticky top-10 z-[100]'>
-            <div className='flex flex-col flex-[2] lg:mt-[50px] mb-6 py-3 h-max w-full items-center justify-center rounded-lg shadow-2xl bg-card '>
+        <section className=' sticky top-32 z-[100]'>
+            <div className='flex flex-col flex-[2] lg:mt-[50px] mb-6 py-3 h-max w-full items-center justify-center rounded-md shadow-2xl bg-card '>
                 <div className='flex items-center  justify-start '>
                     <h2 className='text-lg text-primary uppercase font-semibold tracking-wide'>
                         Related Posts

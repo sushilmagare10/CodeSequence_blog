@@ -103,14 +103,14 @@ const SingleBlogPost = async ({ params }: any) => {
 
     return (
         <div className='flex flex-col justify-center md:items-center '>
-            <div className=' flex flex-col justify-between items-center text-center mt-16 mb-10'>
+            <div className=' flex flex-col justify-between items-center text-center mt-8 mb-10'>
                 <title className='text-xl md:text-5xl lg:text-7xl font-bold tracking-wider '>
                     {data.title}
                 </title>
 
             </div>
             {data?.img && (
-                <div className='relative w-full h-[25vh] md:h-[60vh] px-2 md:px-10 shadow-2xl rounded-lg '>
+                <div className='relative w-full h-[25vh] md:h-[60vh] px-2 md:px-10 shadow-2xl rounded-md '>
                     <Image
                         fill
                         src={cloudinaryURL}
@@ -120,12 +120,12 @@ const SingleBlogPost = async ({ params }: any) => {
                                 (max-width: 768px) 85vw,
                                 (max-width: 1060px) 75vw,
                                 60vw'
-                        className='w-full h-full rounded-lg object-cover'
+                        className='w-full h-full rounded-md object-cover'
                     />
                 </div>
             )}
-            <div className='relative w-full rounded-lg p-3 text-sm md:text-xl text-white font-bold my-8'>
-                <div className='absolute inset-0 rounded-lg bg-gradient-to-tr from-blue-600 to-purple-600 filter blur-[2px] opacity-70'></div>
+            <div className='relative w-full rounded-md p-3 text-sm md:text-xl text-white font-bold my-8'>
+                <div className='absolute inset-0 rounded-md bg-gradient-to-tr from-blue-600 to-purple-600 filter blur-[2px] opacity-70'></div>
                 <div className='relative z-10 flex justify-around items-center gap-10'>
                     <div className='flex justify-center items-center'>
                         {formattedDate}
