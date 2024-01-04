@@ -2,9 +2,8 @@
 
 import { sendEmail } from '@/components/Email/SendEmail';
 import { Button } from '@/components/ui/button';
-import { FaPaperPlane } from "react-icons/fa";
+import { Send } from 'lucide-react';
 import { toast } from "react-toastify";
-
 
 const Contact = () => {
     return (
@@ -42,7 +41,7 @@ const Contact = () => {
                     className="group flex items-center justify-center gap-2 mt-3 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 "
                 >
                     Send Email
-                    <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
+                    <Send className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
                 </Button>
             </form>
         </div>
