@@ -16,13 +16,13 @@ const Navbar = () => {
 
     return (
         <div className='sticky bg-card z-50 top-0 shadow-sm'>
-            <div className='flex justify-between w-full items-center h-24 px-5 md:px-[5rem] lg:px-[18rem] '>
+            <div className='flex justify-between w-full items-center h-24 px-5 md:px-[5rem] lg:px-[8rem] '>
                 <div className='flex flex-1 text-xl font-bold md:text-3xl lg:text-5xl lg:font-bold tracking-wide'>
                     <Link href='/'>
                         Code<span className='text-purple-500'>Sequence</span>
                     </Link>
                 </div>
-                <div className='flex items-center justify-end text-sm gap-4 flex-1 font-medium lg:text-lg sm:gap-4'>
+                <div className='flex items-center justify-end text-sm gap-4 flex-1 font-medium lg:text-base sm:gap-4'>
                     {links.map((link) => (
                         <Link
                             href={link.hash}
